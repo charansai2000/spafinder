@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SPA FINDER</title>
+  <title>Signup Form</title>
 </head>
 <body>
-<h1>
-Hello People<br>
-testing things
-</h1>   
+  <h2>Sign Up</h2>
+  <form action="process_signup.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <input type="submit" value="Sign Up">
+  </form>
 </body>
+<form action="search.php" method="get">
+  <input type="text" name="search" placeholder="Search...">
+  <input type="submit" value="Search">
+</form>
 </html>
