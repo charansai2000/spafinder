@@ -7,71 +7,82 @@
       background-color: #FF6666;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      height: 70vh;
     }
+
     .title {
-      color: #0072b5;
+      color: #5579C6;
       font-size: 50px;
       text-align: center;
-      margin-top: 35px;
+      margin-top: 6vh;
+      /* Adjusted to a percentage of viewport height */
       font-weight: bold;
-    }
-    .white-background {
-      background-color: #fff; /* Add white background color */
-      width: 100%;
-      margin-top: 35px;
-      padding: 100%; /* Add some padding to create space below */
     }
 
     .search-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end; /* Adjusted to align to the top right corner */
-      background-color: #FF6666;
-      padding: 20px;
-      margin-top: 20px;
-      position: absolute; /* Added */
-      top: 0; /* Added */
-      right: 0; /* Added */
+      padding: 7vh;
+      /* Adjusted to a percentage of viewport height */
+      position: absolute;
+      top: 0;
+      right: 0;
+      /* Keep search box on the right side */
+      width: 20%;
+      /* Adjusted to a percentage of the container width */
     }
 
     .search-box {
       display: flex;
       border: 2px solid #0072b5;
       border-radius: 5px;
-      overflow: hidden;
+      width: 90%;
+      /* Container width */
     }
 
     .search-input {
       width: 80%;
-      padding: 10px;
-      border: none;
-      outline: none;
+      padding: 2vh;
+      /* viewport height */
     }
 
     .search-icon {
-      background-color: #33CCFF;
-      color: #fff;
-      padding: 10px;
-      display: flex;
-      align-items: center;
+      padding: 2vh;
+      /* viewport height */
       cursor: pointer;
+    }
+
+    .highlight {
+      background-color: yellow;
     }
   </style>
 </head>
+
 <body>
   <div class="title">FinderSpa</div>
-  <div class="white-background"></div> <!-- White background below the title -->
   <div class="search-container">
     <div class="search-box">
-      <input type="text" class="search-input" placeholder="Search for spa services">
-      <div class="search-icon">
-        <span style="font-size: 24px;">&#128269;</span>
-      </div>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search for spa services">
+      <button onclick="highlightSearch()">Search</button>
+      <script>
+        function highlightSearch() {
+          const searchText = document.getElementById('searchInput').value;
+          const content = document.getElementById('content');
+          // Check if searchText is not empty
+          if (searchText.trim() === "") {
+            return; // Don't highlight if there's no input
+          }
+          // Remove any previous highlights
+          const elements = content.getElementsByClassName('highlight');
+          for (let i = 0; i < elements.length; i++) {
+            elements[i].classList.remove('highlight');
+          }
+          const textToHighlight = content.innerHTML;
+          const highlightedText = textToHighlight.replace(
+            new RegExp(searchText, 'gi'),
+            (match) => `<span class="highlight">${match}</span>`
+          );
+          content.innerHTML = highlightedText;
+        }
+      </script>
     </div>
   </div>
 </body>
