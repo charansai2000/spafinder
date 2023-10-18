@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #FF6666;
+     /* background-color: #FF6666;*/
       margin: 0;
       padding: 0;
       align-items: center;
+      
+    }
+    main{
+      padding: 300px;
+      background: url("spa-packages.jpg");
+      background-size: cover;
+      width: 100%;
     }
 
     .title {
-      color: #5579C6;
+      color: #ad1010;
       font-size: 50px;
       text-align: center;
-      margin-top: 6vh;
+      margin-top: 5vh;
       /* Adjusted to a percentage of viewport height */
       font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .blue-background {
+      background-color:ghostwhite;
+      margin-top: 1vh;
+      width: 100%;
+      /* Adjusted to a percentage of the container width */
+      min-height: 300px;
+      /* Added minimum height for visibility */
     }
 
     .search-container {
-      padding: 7vh;
+      padding: 6vh;
       /* Adjusted to a percentage of viewport height */
       position: absolute;
       top: 0;
@@ -28,40 +46,260 @@
       /* Keep search box on the right side */
       width: 20%;
       /* Adjusted to a percentage of the container width */
+      border-radius: 30px;
     }
 
     .search-box {
       display: flex;
-      border: 2px solid #0072b5;
-      border-radius: 5px;
+      
       width: 90%;
-      /* Container width */
+      border-radius: 30px;
+    
     }
+
 
     .search-input {
       width: 80%;
       padding: 2vh;
+      padding-right: 2px;
+      display: inline-block;
       /* viewport height */
+      border-radius: 30px;
     }
 
     .search-icon {
       padding: 2vh;
       /* viewport height */
       cursor: pointer;
+      display: inline-block;
+      border-radius: 30px;
     }
 
     .highlight {
       background-color: yellow;
     }
+
+    .container {
+      display: flex;
+      /* Added a container to hold both elements in a single line */
+    }
+
+    .green-background {
+      background-color: #009999;
+      margin-top: 2vh;
+      width: 50%;
+      /* Adjusted to a percentage of the container width */
+      min-height: 30px;
+      /* Added minimum height for visibility */
+    }
+
+    .account-creation {
+      background-color: #002999;
+      margin-top: 2vh;
+      width: 50%;
+      /* Adjusted to a percentage of the container width */
+      min-height: 30px;
+      /* Added minimum height for visibility */
+    }
+
+    .Rewards {
+      background-color: #990000;
+      margin-top: 2vh;
+      width: 100%;
+      /* Adjusted to a percentage of the container width */
+      min-height: 150px;
+      /* Added minimum height for visibility */
+    }
+
+    .About {
+      background-color: #008599;
+      margin-top: 1vh;
+      width: 100%;
+      /* Adjusted to a percentage of the container width */
+      min-height: 100px;
+      /* Added minimum height for visibility */
+    }
+    .topnav {
+  overflow: hidden;
+  margin-right: 1150px;
+  margin-left: 0px;
+  background-color:rgb(234, 229, 229);
+  margin-top: 0px;
+  margin-bottom: 1px;
+  opacity: 0.8;
+  
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color: black;
+  opacity: 1;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px; 
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropbtn:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+	display:none;
+  position: absolute;
+  background-color:rgb(234, 229, 229);
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: rgb(234, 229, 229);
+}
+.content{
+  color: #0f0f0f;
+}
+.facial{
+  display: block;
+  margin-right: 750px;
+  box-shadow: 0 0 30px 25px rgba(0,0,0,0.06);
+}
+.top{
+  margin-top: 0%;
+  margin-bottom: 10px;
+  padding:-2px
+}
+.search-button{
+  border-radius: 30px;
+  padding: 15px;
+  margin-left: 0;
+  margin-top: 0;
+  cursor: pointer;
+  
+}
+.search-button:hover{
+  transform: scale(1.1);
+  transition: transform ease-in-out;
+}
   </style>
 </head>
 
 <body>
-  <div class="title">FinderSpa</div>
-  <div class="search-container">
-    <div class="search-box">
-      <input type="text" id="searchInput" class="search-input" placeholder="Search for spa services">
-      <button onclick="highlightSearch()">Search</button>
+  <section class="top">
+    <div class="title">FinderSpa</div>
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search for spa services">
+        <button class="search-button"onclick="highlightSearch()">Search</button>
+      </div>
+      </div>
+      <div class="topnav">
+        <div class="content">
+        <a class="active" href="#home">Home</a>
+        <a class="contact" href="profile.html">Profile</a>
+        <a class="about" href="About_Us.html">About Us</a>
+        <div class="dropdown">
+          <button class="dropbtn">Services 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Massage.html">Massage</a>
+            <a href="Facial.html">Facial</a>
+            <a href="Waxing.html">Waxing</a>
+            <a href="Pedicure-and-Manicure.html">Manicure & Pedicure</a>
+           
+          </div>
+        </div> 
+      </div>
+      </div>
+     
+    
+    
+  </section>
+  
+  <main>
+  <!--<div class="container">
+    <div class="green-background">
+      <div style="display: flex">
+        <h2 style="margin-left: 5px;">Home</h2>
+        <h2 style="margin-left: 10px;">About Us</h2>
+        <h2 style="margin-left: 10px;">Careers</h2>
+      </div>
+    </div>
+    <div class="account-creation">
+      <div style="display: flex; justify-content: flex-end;">
+        <h2 style="margin-right: 10px;">Sign in</h2>
+        <h2 style="margin-right: 5px;">Sign up</h2>
+      </div>
+    </div>
+  </div>-->
+  
+    
+  
+  </main>
+
+  
+  <div class="blue-background" id="content">
+    <div style="display:flex; justify-content: space-between;">
+      <div class="Facial">
+        <h2 style="color:#FF6666;text-align:center; margin-top: 5px; margin-left: 40px">Facial</h2>
+        <a href="Facial.html"><img src="images/facial.WEBP" width="100" height="100"></a>
+      </div>
+      <!--<div class="Haircut">
+        <h2 style="color:#FF6666;text-align:center; margin-top: 5px">Hair Cut</h2>
+        <img src="haircut.jpg" width="100" height="100">
+      </div>-->
+      <div class="Mani/Pedi">
+        <h2 style="color:#FF6666;text-align:center; margin-top: 5px;">Manicure & Pedicure</h2>
+        <a href="Pedicure-and-Manicure.html"><img src="images/manipedi.jpg" width="100" height="100"></a>
+      </div>
+      <div class="Massage">
+        <h2 style="color:#FF6666;text-align:center; margin-top: 5px">Massage</h2>
+        <a href="Massage.html"><img src="images/massage.JPG" width="100" height="100"></a>
+      </div>
+      <div class="Waxing">
+        <h2 style="color:#FF6666;text-align:center; margin-top: 5px">Waxing</h2>
+        <a href="Waxing.html"><img src="images/waxing.jpeg" width="100" height="100"></a>
+      </div>
+    </div>
+  </div>
+  <div class="Rewards" style="display: flex; align-items: center;">
+    <h2 style="margin-left: 40% ; color: #7866ff; font-size: 24px; font-weight: bold;"><a href="Rewards.html">Rewards & Discounts</a></h2>
+  </div>
+  <div class="About" style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <h2 style="color: #161617; font-size: 24px; font-weight: bold;">Privacy Policy</h2>
+      <h2 style="color: #161617; font-size: 24px; font-weight: bold;">Connect with us</h2>
+    </div>
+    <img src="C:\Users\anjal\projects\spafinder\FS Logo.png" style="width: 100px; height: 100px; margin-top: 1%;">
+  </div>
+  
       <script>
         function highlightSearch() {
           const searchText = document.getElementById('searchInput').value;
