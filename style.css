@@ -43,6 +43,8 @@
       width: 20%;
       /* Adjusted to a percentage of the container width */
       border-radius: 30px;
+      margin-bottom: 10px;
+      margin-top: 30px;
     }
 
     .search-box {
@@ -50,7 +52,8 @@
       
       width: 90%;
       border-radius: 30px;
-    
+      margin-bottom: 5px;
+      margin-top: 40px;
     }
 
 
@@ -61,6 +64,8 @@
       display: inline-block;
       /* viewport height */
       border-radius: 30px;
+      margin-bottom: 5px;
+      margin-top: 40px;
     }
 
     .search-icon {
@@ -69,6 +74,10 @@
       cursor: pointer;
       display: inline-block;
       border-radius: 30px;
+      margin-bottom: 0;
+      height: 1px;
+      margin-top: 40px;
+      margin-bottom: 5px;
     }
 
     .highlight {
@@ -196,32 +205,17 @@
   border-radius: 30px;
   padding: 15px;
   margin-left: 0;
-  margin-top: 0;
+  margin-top: 40px;
   cursor: pointer;
-  
+  margin-bottom: 5px;
+ 
 }
 .search-button:hover{
   transform: scale(1.1);
   transition: transform ease-in-out;
 }
-.buttonss{
-    /*linear-gradient(#e66465, #9198e5)*/
-    background: rgb(5, 5, 165);
-    margin-top: 0.5em;
-    border-radius: 40px;
-    padding: 0.5em;
-    padding-right: 2em;
-    padding-left: 2em;
-    color: #ebf8e1;
 
-}
-
-
-    
-    
-    
-.buttons{
-        
+.sign-buttons{
     position: relative;
     text-decoration: none;
     border:1px rgb(184, 105, 105) ;
@@ -240,20 +234,26 @@
     cursor: pointer;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     /*margin-left: 5px;*/
-    margin-top: 0;
+}
+.sign-buttons:hover{
+    transform: scale(1.2);
+    transition:transform 330ms ease-out;
+}
+.buttonss{
+    /*linear-gradient(#e66465, #9198e5)*/
+    background: rgb(5, 5, 165);
+    margin-top: 0.5em;
+    border-radius: 40px;
+    padding: 0.5em;
+    padding-right: 2em;
+    padding-left: 2em;
+    color: #ebf8e1;
 
 }
 .buttonss:hover{
     transform: scale(1.2);
     transition:transform 330ms ease-out;
         
-}
-
-.buttons:hover{
-    transform: scale(1.2);
-    transition:transform 330ms ease-out;
-    cursor: pointer;
-    
 }
 .main{
     /*linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)*/
@@ -296,4 +296,3 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.06);
     border:#131212;
 }
- 
