@@ -33,7 +33,7 @@
         <a class="about" href="About_Us.html">About Us</a>
         <div class="dropdown">
           <button class="dropbtn">Services 
-            <i class="fa fa-caret-down"></i>
+            <!--<i class="fa fa-caret-down"></i> -->
           </button>
           <div class="dropdown-content">
             <a href="Massage.html">Massage</a>
@@ -128,11 +128,9 @@
             elements[i].classList.remove('highlight');
           }
           const textToHighlight = content.innerHTML;
-          const highlightedText = textToHighlight.replace(
-            new RegExp(searchText, 'gi'),
-            (match) => `<span class="highlight">${match}</span>`
-          );
-          content.innerHTML = highlightedText;
+          console.log(textToHighlight);
+          const Element = content.getElementsByClassName(searchText);
+           Element[0].classList.add('highlight');
         }
       </script>
     </div>
