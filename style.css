@@ -117,7 +117,7 @@
     }
 
     .About {
-      background-color: #008599;
+     /* background-color: #008599;*/
       margin-top: 1vh;
       width: 100%;
       /* Adjusted to a percentage of the container width */
