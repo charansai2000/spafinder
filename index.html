@@ -6,17 +6,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <a id="signin" href="signin.html"> <button class="sign-buttons">Sign In</button> </a>
-    <a id="signup" href="signup.html"> <button class="sign-buttons">Sign Up</button> </a>
-  <section class="top">
+<body class="main-body">
+ <!-- class="sign-buttons"-->
+ <section class="top">
+ <div class="sign-buttons-div">
+
+  <button class="sign-buttons"onclick="window.location.href='signup.html'">Sign Up</button>
+  <button class="sign-buttons"onclick="window.location.href='signin.html'">Sign In</button>
+</div>
+   <!-- <a class="sign-buttons" href="signup.html" style="text-decoration: none;"> <button >Sign Up</button> </a>
+    <a class="sign-buttons" href="signin.html" style="text-decoration: none;"> <button >Sign In</button> </a>-->
+  
     <div class="title">FinderSpa</div>
-    <div class="search-container">
-      <div class="search-box">
-        <input type="text" id="searchInput" class="search-input" placeholder="Search for spa services">
-        <button class="search-button"onclick="highlightSearch()">Search</button>
-      </div>
-      </div>
+   
    <!--<div class="search-container">
       <div class="search-box">
         <input type="text" id="searchInput" class="search-input" placeholder="Search for spa services">
@@ -43,6 +45,12 @@
         </div> 
       </div>
       </div>
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search for spa services">
+          <button class="search-button"onclick="highlightSearch()">Search</button>
+        </div>
+        </div>
      
     
     
