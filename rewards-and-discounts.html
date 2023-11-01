@@ -1,13 +1,186 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            Rewards and Discounts
-        </title>
-    </head>
-    <body>
-        <h1>
-            Rewards and Discounts
-        </h1>
-    </body>
+<head>
+    <title>REWARDS & DISCOUNTS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Align the elements side by side */
+            background: url(https://www.atulhost.com/wp-content/uploads/2019/08/reward-2048x1024.jpg) no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            color: #fff;
+        }
+
+        .big-container {
+            display: flex; /* Make the containers flex containers */
+            align-items: flex-start; /* Align containers at the top */
+            justify-content: space between; /* Align the containers side by side */
+            margin: 30px;
+        }
+
+        .container {
+            width: 10%;
+            flex: 1; /* Adjusted width using flex */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-right: -40px;
+            z-index: 1;
+        }
+
+        .image-container {
+            flex: 1; /* Adjusted width using flex */
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 34px;
+            color: #333;
+        }
+
+        .subscribe-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .email-input {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .subscribe-button {
+            flex: 1;
+            background-color: #00838f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .subscribe-heading {
+            display: flex; /* Use flex to arrange the heading and icons horizontally */
+            align-items: center; /* Vertically center align the heading and icons */
+        }
+
+        .subscribe-heading h3 {
+            margin-top: 40px;
+            margin-right: 10px; /* Add some spacing between the heading and icons */
+            font-size: 18px; /* Increase the font size for better visibility */
+        }
+
+        .social-icons a {
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            margin-top: 20px;
+            height: 40px;
+            width: 70px;
+            margin-right: 10px;
+        }
+
+        .subscribe-button:hover {
+            background-color: #00838f;
+        }
+
+        /* Add styles for the success popup */
+        .popup {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .popup-button {
+            background-color: #00838f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <h1>SUBSCRIBE FOR SPECIAL OFFERS</h1>
+    <div class="big-container">
+        <div class="container">
+            <p>Get 10% off Spafinder Gift Cards & save on spa services and treatments! Sign Up For Your Spa Insider Today!</p>
+            <form class="subscribe-form" id="subscribe-form">
+                <input type="email" class="email-input" placeholder="Enter your email">
+                <button type="submit" class="subscribe-button" id="subscribe-button">Subscribe</button>
+            </form>
+            <div class="subscribe-heading">
+                <h3>Subscribe with :</h3>
+                <div class="social-icons">
+                    <a href="C:\Users\anjal\projects\spafinder\signup.html">
+                        <img src="http://1000logos.net/wp-content/uploads/2016/11/fb-logo.jpg">
+                    </a>
+                    <a href="C:\Users\anjal\projects\spafinder\signup.html">
+                        <img src="https://th.bing.com/th?id=OIP.N3cFVgAShuhUnvU-yBB12AHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2">
+                    </a>
+                </div>
+            </div>
+            <h4 style="text-align: left;">By subscribing you agree to our <a href="C:\Users\anjal\projects\spafinder\priv.html" style="color: black;">Privacy Policy.</a></h4>
+            <h4 style="text-align: left;"><a href="C:\Users\anjal\projects\spafinder\terms.html" style="color: black; text-decoration: none;">Terms & Conditions</a></h4>
+        </div>
+        <div class="image-container">
+            <img class="image" src="https://www.theladders.com/wp-content/uploads/spa_couple_190524.jpg">
+        </div>
+    </div>
+
+    <div class="popup" id="success-popup" style="display: none;">
+        <div class="popup-content">
+            <h2>You have successfully subscribed to SpaFinder</h2>
+            <button class="popup-button" id="close-popup" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("subscribe-button").addEventListener("click", function () {
+            document.getElementById("success-popup").style.display = "flex";
+        });
+
+        function closePopup() {
+            document.getElementById("success-popup").style.display = "none";
+        }
+    </script>
+</body>
 </html>
