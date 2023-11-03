@@ -315,7 +315,7 @@ a{
 }
 .contact-us-button {
   position:absolute;
-  bottom: -490px;
+ 
   right: 20px;
   z-index: 10;
 }
