@@ -30,7 +30,7 @@
       margin-top: 1vh;
       width: 100%;
       /* Adjusted to a percentage of the container width */
-      min-height: 300px;
+    
       /* Added minimum height for visibility */
     }
 
@@ -110,8 +110,7 @@
     }
 
     .Rewards {
-      background-color: #990000;
-      margin-top: 2vh;
+      background-color: #ad1010;
       width: 100%;
       /* Adjusted to a percentage of the container width */
       min-height: 150px;
@@ -313,7 +312,6 @@ a{
 .main-body{
   overflow-x: hidden;
   width: 100%;
-  
 }
 .contact-us-button {
   position:absolute;
