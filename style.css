@@ -313,7 +313,9 @@ a{
   overflow-x: hidden;
   width: 100%;
 }
-.marquee-container {
-  white-space: nowrap;
-  overflow: hidden;
+.contact-us-button {
+  position:absolute;
+  bottom: -490px;
+  right: 20px;
+  z-index: 10;
 }
