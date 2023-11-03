@@ -17,7 +17,6 @@
 </div>
    <!-- <a class="sign-buttons" href="signup.html" style="text-decoration: none;"> <button >Sign Up</button> </a>
     <a class="sign-buttons" href="signin.html" style="text-decoration: none;"> <button >Sign In</button> </a>-->
-  
     <div class="title">FinderSpa</div>
    
       <div class="topnav">
@@ -34,7 +33,6 @@
             <a href="Facial.html">Facial</a>
             <a href="Pedicure-and-Manicure.html">Manicure & Pedicure</a>
             <a href="Massage.html">Massage</a>
-            
             <a href="Waxing.html">Waxing</a>
            
            
@@ -71,32 +69,20 @@
       </div>
     </div>
   </div>-->
-  
-    
-  
   </main>
 
   
   <div class="blue-background" id="content">
     <div style="display:flex; justify-content: space-between;">
-      <div class="Facial" style="text-align:center">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px; margin-left: 40px">Facial</h2>
-        <a href="Facial.html"><img style= margin-left:30px src="images/facial.WEBP" width="100" height="100"></a>
-      </div>
-      <div class="Massage">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px">Massage</h2>
-        <a href="Massage.html"><img src="images/massage.JPG" width="100" height="100"></a>
-      </div>
-      <div class="Waxing">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px">Waxing</h2>
-        <a href="Waxing.html"><img src="images/waxing.jpeg" width="100" height="100"></a>
-      </div>
-      <div class="Mani/Pedi" style="text-align: center;">
-        <h2 style="color: hsl(0, 87%, 48%); margin-top: 5px;">Manicure & Pedicure</h2>
-        <a href="PedicureandManicure.html" style="display: block; margin: 0 auto;">
-            <img src="images/manipedi.jpg" width="100" height="100">
-        </a>
-    </div>    
+      <div class="Facial">
+        <h2 style="color: #111111e0; font-size: 30px; font-weight: bold; text-align: center;">PHOTO GALLERY</h2>
+        <marquee loop="infinite" style =  animation:60s>
+        <img src ="images/facial.WEBP" height="300px" width="500px"/>&nbsp;&nbsp;<img src="images/massage.JPG" height="300px" width="500px"/>&nbsp;&nbsp;
+        <img src="images/waxing.jpeg"height="300px" width="500px"/>&nbsp;&nbsp;<img src ="images/manipedi.jpg"height="300px" width="500px"/>&nbsp;&nbsp;
+        <img src="images/mani.jpg"height="300px" width="500px"/>&nbsp;&nbsp;<img src="images/spa.jpg"height="300px" width="500px"/>&nbsp;&nbsp;
+        <img src="images/pedi.png"height="300px" width="500px"/>
+      </marquee>
+        </div> 
     </div>
   </div>
   <div class="Rewards" style="display: flex; align-items: center; text-align: center;">
@@ -106,6 +92,7 @@
         </a>
     </h2>
 </div>
+
   <div class="About" style="display: flex; justify-content: space-between; align-items: center;">
     <div>
       <button onclick="window.open('priv.html', '_blank');">Privacy Policy</button>
@@ -113,26 +100,26 @@
     </div>
     <img src="FS Logo.png" style="width: 100px; height: 100px; margin-top: 1%;">
   </div>
-  
-      <script>
-        function highlightSearch() {
-          const searchText = document.getElementById('searchInput').value;
-          const content = document.getElementById('content');
-          // Check if searchText is not empty
-          if (searchText.trim() === "") {
-            return; // Don't highlight if there's no input
-          }
-          // Remove any previous highlights
-          const elements = content.getElementsByClassName('highlight');
-          for (let i = 0; i < elements.length; i++) {
-            elements[i].classList.remove('highlight');
-          }
-          const textToHighlight = content.innerHTML;
-          console.log(textToHighlight);
-          const Element = content.getElementsByClassName(searchText);
-           Element[0].classList.add('highlight');
-        }
-      </script>
+<script>
+  function highlightSearch() {
+    const searchText = document.getElementById('searchInput').value;
+    const content = document.getElementById('content');
+    // Check if searchText is not empty
+    if (searchText.trim() === "") {
+      return; // Don't highlight if there's no input
+    }
+    // Remove any previous highlights
+    const elements = content.getElementsByClassName('highlight');
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].classList.remove('highlight');
+    }
+    const textToHighlight = content.innerHTML;
+    console.log(textToHighlight);
+    const Element = content.getElementsByClassName(searchText);
+     Element[0].classList.add('highlight');
+  }
+</script>
+
     </div>
   </div>
 </body>
