@@ -137,6 +137,7 @@
   width: 28.3%;
   
 }
+/*Styling for navigation menu in homepage*/
 
 .topnav a {
   float: left;
@@ -312,4 +313,5 @@ a{
 .main-body{
   overflow-x: hidden;
   width: 100%;
+  
 }
