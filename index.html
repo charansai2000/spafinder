@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>SPA FINDER</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
@@ -78,17 +79,9 @@
   
   <div class="blue-background" id="content">
     <div style="display:flex; justify-content: space-between;">
-      <div class="Facial">
+      <div class="Facial" style="text-align:center">
         <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px; margin-left: 40px">Facial</h2>
-        <a href="Facial.html"><img src="images/facial.WEBP" width="100" height="100"></a>
-      </div>
-      <!--<div class="Haircut">
-        <h2 style="color:#FF6666;text-align:center; margin-top: 5px">Hair Cut</h2>
-        <img src="haircut.jpg" width="100" height="100"> 
-      </div>-->
-      <div class="Mani/Pedi">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px;">Manicure & Pedicure</h2>
-        <a href="PedicureandManicure.html"><img src="images/manipedi.jpg" width="100" height="100"></a>
+        <a href="Facial.html"><img style= margin-left:30px src="images/facial.WEBP" width="100" height="100"></a>
       </div>
       <div class="Massage">
         <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px">Massage</h2>
@@ -98,11 +91,21 @@
         <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px">Waxing</h2>
         <a href="Waxing.html"><img src="images/waxing.jpeg" width="100" height="100"></a>
       </div>
+      <div class="Mani/Pedi" style="text-align: center;">
+        <h2 style="color: hsl(0, 87%, 48%); margin-top: 5px;">Manicure & Pedicure</h2>
+        <a href="PedicureandManicure.html" style="display: block; margin: 0 auto;">
+            <img src="images/manipedi.jpg" width="100" height="100">
+        </a>
+    </div>    
     </div>
   </div>
-  <div class="Rewards" style="display: flex; align-items: center;">
-    <h2 style="margin-left: 40% ; color: #7866ff; font-size: 24px; font-weight: bold;"><a href="rewards-and-discounts.html">Rewards & Discounts</a></h2>
-  </div>
+  <div class="Rewards" style="display: flex; align-items: center; text-align: center;">
+    <h2 style="margin-left: 40%; color: #1b1b1c; font-size: 24px; font-weight: bold;">
+        <a href="rewards-and-discounts.html" style="text-decoration: none; color: #1b1b1c;">
+            Explore our Rewards & Discounts
+        </a>
+    </h2>
+</div>
   <div class="About" style="display: flex; justify-content: space-between; align-items: center;">
     <div>
       <button onclick="window.open('priv.html', '_blank');">Privacy Policy</button>
