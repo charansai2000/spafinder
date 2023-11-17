@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>SPA FINDER</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body class="main-body">
@@ -22,8 +24,17 @@
       <div class="topnav">
         <div class="content">
         <a class="active" href="#home">Home</a>
-        <a class="contact" href="profile.html">Profile</a>
+        
+        
+        <div class="dropdown">
+          <button class="dropbtn">Profile</button>
+          <div class="dropdown-content">
+            <a href="profile.html">My Account</a>
+            <a href="update_personal_info.html">Update Personal Information</a>
+          </div>
+        </div>
         <a class="about" href="About_Us.html">About Us</a>
+        <a  href="Contact.html">Contact</a>
         <div class="dropdown">
           <button class="dropbtn">Services 
             <!--<i class="fa fa-caret-down"></i> -->
@@ -31,14 +42,14 @@
           <!--All the available services in the homepage with hyperlinks-->
           <div class="dropdown-content"> 
             <a href="Facial.html">Facial</a>
-            <a href="Pedicure-and-Manicure.html">Manicure & Pedicure</a>
+            <a href="PedicureandManicure.html">Manicure & Pedicure</a>
             <a href="Massage.html">Massage</a>
             
             <a href="Waxing.html">Waxing</a>
-           
-           
           </div>
+          
         </div> 
+        
       </div>
       </div>
       <!--search section in the homepage-->
@@ -52,7 +63,9 @@
     
     
   </section>
+
   
+  </div>
   <main>
     
   <!--<div class="container">
@@ -74,42 +87,34 @@
     
   
   </main>
-
-  
-  <div class="blue-background" id="content">
+<div class="blue-background" id="content">
     <div style="display:flex; justify-content: space-between;">
       <div class="Facial">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px; margin-left: 40px">Facial</h2>
-        <a href="Facial.html"><img src="images/facial.WEBP" width="100" height="100"></a>
-      </div>
-      <!--<div class="Haircut">
-        <h2 style="color:#FF6666;text-align:center; margin-top: 5px">Hair Cut</h2>
-        <img src="haircut.jpg" width="100" height="100"> 
-      </div>-->
-      <div class="Mani/Pedi">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px;">Manicure & Pedicure</h2>
-        <a href="PedicureandManicure.html"><img src="images/manipedi.jpg" width="100" height="100"></a>
-      </div>
-      <div class="Massage">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px">Massage</h2>
-        <a href="Massage.html"><img src="images/massage.JPG" width="100" height="100"></a>
-      </div>
-      <div class="Waxing">
-        <h2 style="color:hsl(0, 87%, 48%);text-align:center; margin-top: 5px">Waxing</h2>
-        <a href="Waxing.html"><img src="images/waxing.jpeg" width="100" height="100"></a>
-      </div>
+        <h2 style="color: #111111e0; font-size: 30px; font-weight: bold; text-align: center;">PHOTO GALLERY</h2>
+        <marquee loop="infinite" style =  animation:60s>
+        <img src ="images/facial.WEBP" height="300px" width="500px"/>&nbsp;&nbsp;<img src="images/massage.JPG" height="300px" width="500px"/>&nbsp;&nbsp;
+        <img src="images/waxing.jpeg"height="300px" width="500px"/>&nbsp;&nbsp;
+        <img src="images/mani.jpg"height="300px" width="500px"/>&nbsp;&nbsp;<img src="images/spa.jpg"height="300px" width="500px"/>&nbsp;&nbsp;
+        <img src="images/pedi.png"height="300px" width="500px"/>
+      </marquee>
+        </div>   
     </div>
   </div>
-  <div class="Rewards" style="display: flex; align-items: center;">
-    <h2 style="margin-left: 40% ; color: #7866ff; font-size: 24px; font-weight: bold;"><a href="rewards-and-discounts.html">Rewards & Discounts</a></h2>
-  </div>
+
+  <div class="Rewards" style="display: flex; align-items: center; text-align: center;">
+    <h2 style="margin-left: 40%; color: #1b1b1c; font-size: 24px; font-weight: bold;">
+        <a href="rewards-and-discounts.html" style="text-decoration: none; color: #1b1b1c;">
+            Explore our Rewards & Discounts
+        </a>
+    </h2>
+</div>
+
   <div class="About" style="display: flex; justify-content: space-between; align-items: center;">
     <div>
       <button onclick="window.open('priv.html', '_blank');">Privacy Policy</button>
-      <h2 style="color: #161617; font-size: 24px; font-weight: bold;">Connect with us</h2>
+      <button class="contact-us-button" onclick="window.open('Contact.html', '_self', 'width=500,height=300');">Contact Us</button>
     </div>
-    <img src="FS Logo.png" style="width: 100px; height: 100px; margin-top: 1%;">
-  </div>
+</div>
   
       <script>
         function highlightSearch() {
