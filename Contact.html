@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Contact Us</title>
-  
   <style>
     .contact-us-button {
       position: fixed;
@@ -14,7 +14,6 @@
       padding: 15px;
       border-radius: 40px;
     }
-    
 
     .popup {
       position: fixed;
@@ -22,7 +21,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(251, 248, 248, 0.926);
+      background-color: rgba(252, 247, 247, 0.926);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,7 +30,7 @@
     .popup-content {
       width: 500px;
       height: 300px;
-      background-color: rgba(244, 126, 124, 0.925);
+      background-color: hsla(0, 90%, 74%, 0.925);
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -56,11 +55,23 @@
     .popup-content h1 {
       text-align: center;
     }
+
+    /* Close button style */
+    .close-button {
+      position: absolute;
+      top: 250px;
+      right: 500px;
+      font-size: 20px;
+      color: #000;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
   <div class="popup">
     <div class="popup-content">
+      <span class="close-button" onclick="closePopup()">&times;</span>
       <h1>Contact form</h1>
       <h2>Submit the form. We'll be in touch soon!</h2>
 
@@ -70,8 +81,16 @@
         <input type="text" name="service" placeholder="Service looking for">
         <button type="submit">Submit</button>
       </form>
-      
     </div>
   </div>
+
+  <script>
+    function closePopup() {
+      document.querySelector('.popup').style.display = 'none';
+      window.location.href = 'contact_subpage.html'; // Redirect to the subpage
+  
+    }
+  </script>
 </body>
+
 </html>
