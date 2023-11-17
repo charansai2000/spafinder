@@ -24,8 +24,17 @@
       <div class="topnav">
         <div class="content">
         <a class="active" href="#home">Home</a>
-        <a class="contact" href="profile.html">Profile</a>
+        
+        
+        <div class="dropdown">
+          <button class="dropbtn">Profile</button>
+          <div class="dropdown-content">
+            <a href="profile.html">My Account</a>
+            <a href="update_personal_info.html">Update Personal Information</a>
+          </div>
+        </div>
         <a class="about" href="About_Us.html">About Us</a>
+        <a  href="Contact.html">Contact</a>
         <div class="dropdown">
           <button class="dropbtn">Services 
             <!--<i class="fa fa-caret-down"></i> -->
@@ -36,6 +45,7 @@
             <a href="PedicureandManicure.html">Manicure & Pedicure</a>
             <a href="Massage.html">Massage</a>
             
+
             <a href="Waxing.html">Waxing</a> 
           </div>  
         </div> 
@@ -52,7 +62,13 @@
           </div>  
         </div> 
 
-      </div>
+            <a href="Waxing.html">Waxing</a>
+          </div>
+          
+        </div> 
+        
+
+     
       </div>
       <!--search section in the homepage-->
       <div class="search-container">
@@ -113,12 +129,74 @@
 
   <div class="About" style="display: flex; justify-content: space-between; align-items: center;">
     <div>
-      <button onclick="window.open('priv.html', '_blank');">Privacy Policy</button></div>
-      <div>
-  <button class="contact-us-button" onclick="window.open('Contact.html', '_self', 'width=500,height=300');">Contact Us</button>
+      <button onclick="window.open('priv.html', '_blank');">Privacy Policy</button>
+      <button class="contact-us-button" onclick="window.open('Contact.html', '_self', 'width=500,height=300');">Contact Us</button>
+    </div>
 </div>
+<!-- Chatbot Structure -->
+<div id="chatbot">
+  <div id="chatbot-header">
+      SpaFi 
+      <button onclick="toggleChatbot(false)">X</button>
+  </div>
+  <div id="chatbot-body">
+      <div id="chatbot-messages">
+          <div class="chatbot-message">Hello, I'm SpaFi, how can I assist you today?</div>
+          <div class="chatbot-message">Frequently Asked Questions:</div>
+          <ul>
+              <li>How do I book an appointment?</li>
+              <li>What services do you offer?</li>
+              <li>Do you have any ongoing promotions?</li>
+              <!-- Add more FAQs as needed -->
+          </ul>
+      </div>
+  </div>
+  <div id="chatbot-footer">
+      <input type="text" id="chatbot-input" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<!-- Minimized Chatbot Bar -->
+<div id="chatbot-minimized" onclick="toggleChatbot(true)" style="display:none;">
+  <span>Chat with SpaFi</span>
+</div>
+
+
   
       <script>
+  function toggleChatbot(show) {
+    var chatbot = document.getElementById("chatbot");
+    var chatbotMinimized = document.getElementById("chatbot-minimized");
+
+    if (show) {
+        chatbot.style.display = "block";
+        chatbotMinimized.style.display = "none";
+    } else {
+        chatbot.style.display = "none";
+        chatbotMinimized.style.display = "flex";
+    }
+}
+
+function sendMessage() {
+    var input = document.getElementById("chatbot-input");
+    var message = input.value.trim();
+    if (message) {
+        var messagesContainer = document.getElementById("chatbot-messages");
+        var newMessageDiv = document.createElement("div");
+        newMessageDiv.classList.add("chatbot-message");
+        newMessageDiv.textContent = message;
+        messagesContainer.appendChild(newMessageDiv);
+        input.value = "";
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+}
+
+// Automatically display the chatbot after a set time
+setTimeout(function() {
+    toggleChatbot(true);
+}, 2000);
+
         function highlightSearch() {
           const searchText = document.getElementById('searchInput').value;
           const content = document.getElementById('content');
