@@ -227,25 +227,7 @@
 </div>
 
     </div> 
-    <div class="center-container">
-        <div class="center-content">
-            <h3>Do you have a gift card?</h3>
-            <img src="C:\Users\anjal\projects\spafinder\images\Giftcard.png" alt="Gift Card Image">
-        </div>
-    </div>  
-    <div>
-        <h3>Click the button below to scan it:</h3>
-        <button id="startCamera" class="camera">Scan Gift Card</button>
-        <video id="cameraView" style="display: none;"></video>
-        <canvas id="canvas" style="display: none;"></canvas>  
-        <img id="scannedImage" style="display: none; max-width: 100%;" alt="Scanned Gift Card">
-
-<div class="crypto-payment">
-        <h2> Crypto only Spa Events and Merchandise</h2></div>
-        <div class="privacy">
-        <p>Pay with crypto to enjoy exclusive access to special spa events and purchasing merchandise.</p>
-        </div>
-    </div>
+    
         <div class = "crypto-form"
         <form id="crypto-payment-form">
             <div class="form-group">
@@ -271,7 +253,26 @@
             <button onclick type="submit" class="crypto-pay-button">Pay with Crypto</button>
         </form>
 
-    </div>    
+    </div>  
+    <div class="center-container">
+        <div class="center-content">
+            <h3>Do you have a gift card?</h3>
+            <img src="images/Giftcard.png" alt="Gift Card Image">
+        </div>
+    </div>  
+    <div>
+        <h3>Click the button below to scan it:</h3>
+        <button id="startCamera" class="camera">Scan Gift Card</button>
+        <video id="cameraView" style="display: none;"></video>
+        <canvas id="canvas" style="display: none;"></canvas>  
+        <img id="scannedImage" style="display: none; max-width: 100%;" alt="Scanned Gift Card">
+    </div>
+<div class="crypto-payment">
+        <h2> Crypto only Spa Events and Merchandise</h2></div>
+        <div class="privacy">
+        <p>Pay with crypto to enjoy exclusive access to special spa events and purchasing merchandise.</p>
+        </div>
+    </div>
     <script>
         document.getElementById("subscribe-button").addEventListener("click", function () {
             document.getElementById("success-popup").style.display = "flex";
