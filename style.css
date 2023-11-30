@@ -377,6 +377,7 @@ a{
 
 #chatbot input:focus, #chatbot button {
   outline: none;
+  
 }
 
 .chatbot-message {
