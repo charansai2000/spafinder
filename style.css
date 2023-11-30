@@ -8,17 +8,31 @@
       overflow-x: hidden;
       
     }
+    
     main{
       padding: 300px;
       background: url("spa-packages.jpg");
       background-size: cover;
-      max-width : 80%;
+      max-width : 100%;
     }
+    .dropdown-toggle::after {
+      display: none;
+  }
+  
+  .dropdown:hover > .dropdown-menu {
+      display: block;
+  }
+  
+  .dropdown > .dropdown-toggle:active {
+      pointer-events: none;
+  }
 
     .title {
       color: #ad1010;
       font-size: 50px;
-      text-align: center;
+      margin-left: 40%;
+      margin-right: 50%;
+      /*text-align: center;*/
       margin-top: 5vh;
       /* Adjusted to a percentage of viewport height */
       font-weight: bold;
@@ -125,20 +139,20 @@
       min-height: 100px;
       /* Added minimum height for visibility */
     }
-    .topnav {
+    /*.topnav {
   overflow: hidden;
   margin-right: 1150px;
   margin-left: 0px;
   background-color:rgb(234, 229, 229);
-  margin-top: 0px;
-  margin-bottom: 1px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   opacity: 0.8;
-  width: 45.3%;
+  width: 51%;
   
-}
+}*/
 /*Styling for navigation menu in homepage*/
 
-.topnav a {
+/*.topnav a {
   float: left;
   color: black;
   text-align: center;
@@ -185,10 +199,10 @@
   min-width: 160px;
   z-index: 1;
 }
-
+*/
 .dropdown:hover .dropdown-content {
   display: block;
-  background-color: rgb(234, 229, 229);
+  background-color: rgb(179, 172, 172);
 }
 .content{
   color: #0f0f0f;
@@ -321,7 +335,7 @@ a{
 }
 #chatbot {
   width: 300px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 10px;
   background-color: white;
@@ -374,7 +388,7 @@ a{
 
 #chatbot-minimized {
   position: fixed;
-  bottom: 63px;
+  bottom: 20px;
   right: 30px;
   background-color: #4CAF50;
   color: white;

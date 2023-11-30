@@ -2,6 +2,71 @@
 <html>
 
 <head>
+  <title>Contact Us - Additional Details</title>
+  <style>
+    body {
+      background-color: white#f6f1f2;
+      font-family: Arial, sans-serif;
+      color: #0e0606;
+      margin: 0;
+      text-align: left;
+      padding: 20px;
+      transition: filter 0.5s ease; /* Add transition for smooth effect */
+    }
+
+    /* Apply blur effect when the popup is open */
+    body.blur {
+      filter: blur(5px);
+    }
+
+    header {
+      background-color: #cc2727;
+      padding: 10px;
+      color: #fff;
+      text-align: left;
+    }
+
+    h1 {
+      color: #efe6e6;
+    }
+
+    p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    img {
+      width: 20%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>FinderSpa</h1>
+  </header>
+  <img src="contact.jpeg" alt="Spa Image">
+  <h2>Contact Us</h2>
+  <p>US Office Address: FinderSpa, 123 Serenity Street, Tranquil City, Blissful, Zip-98765 Email: info@finderspa.com Phone Number: 1-866-235-8886 (Toll Free). You can contact us anytime, any day, throughout the year. We provide you services 24*7. We will revert to your emails and phone messages within a day (24 hrs).</p>
+  <h3>Customer Support</h3>
+  <p>USA: +1 (479)-222222, +1 (479)-111111</p>
+  <p>*Calls may be recorded for training and quality purposes and for compliance with applicable regulatory requirements.</p>
+  <p>Email: info@finderspa.com</p>
+  <p>Phone: +1 (123) 456-7890</p>
+
+  <!-- Replace "path/to/your/image.jpg" with the actual path to your image file -->
+
+  <!-- Add any other details as needed -->
+</body>
+
+</html>
+
+<!-- Popup Code -->
+<!DOCTYPE html>
+<html>
+
+<head>
   <title>Contact Us</title>
   <style>
     .contact-us-button {
@@ -49,7 +114,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      align-self: center; /* Align the button to the center horizontally */
+      align-self: center;
     }
 
     .popup-content h1 {
@@ -87,8 +152,8 @@
   <script>
     function closePopup() {
       document.querySelector('.popup').style.display = 'none';
+      document.body.classList.remove('blur'); // Remove blur effect when closing popup
       window.location.href = 'contact_subpage.html'; // Redirect to the subpage
-  
     }
   </script>
 </body>
