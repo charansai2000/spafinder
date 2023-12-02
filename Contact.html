@@ -39,36 +39,6 @@
       width: 20%;
       height: auto;
     }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>FinderSpa</h1>
-  </header>
-  <img src="contact.jpeg" alt="Spa Image">
-  <h2>Contact Us</h2>
-  <p>US Office Address: FinderSpa, 123 Serenity Street, Tranquil City, Blissful, Zip-98765 Email: info@finderspa.com Phone Number: 1-866-235-8886 (Toll Free). You can contact us anytime, any day, throughout the year. We provide you services 24*7. We will revert to your emails and phone messages within a day (24 hrs).</p>
-  <h3>Customer Support</h3>
-  <p>USA: +1 (479)-222222, +1 (479)-111111</p>
-  <p>*Calls may be recorded for training and quality purposes and for compliance with applicable regulatory requirements.</p>
-  <p>Email: info@finderspa.com</p>
-  <p>Phone: +1 (123) 456-7890</p>
-
-  <!-- Replace "path/to/your/image.jpg" with the actual path to your image file -->
-
-  <!-- Add any other details as needed -->
-</body>
-
-</html>
-
-<!-- Popup Code -->
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Contact Us</title>
-  <style>
     .contact-us-button {
       position: fixed;
       bottom: 20px;
@@ -100,6 +70,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
     }
 
     .popup-content form input,
@@ -124,19 +95,32 @@
     /* Close button style */
     .close-button {
       position: absolute;
-      top: 250px;
-      right: 500px;
+      top: 10px;
+      right: 10px;
       font-size: 20px;
       color: #000;
       cursor: pointer;
     }
   </style>
-</head>
 
 <body>
-  <div class="popup">
+  <header>
+    <h1>FinderSpa</h1>
+    <!-- Add navigation links or any other content for the header here -->
+  </header>
+  <img src="contact.jpeg" alt="Spa Image">
+  <h2>Contact Us</h2>
+  <p>US Office Address: FinderSpa, 123 Serenity Street, Tranquil City, Blissful, Zip-98765 Email: info@finderspa.com Phone Number: 1-866-235-8886 (Toll Free). You can contact us anytime, any day, throughout the year. We provide you services 24*7. We will revert to your emails and phone messages within a day (24 hrs).</p>
+  <h3>Customer Support</h3>
+  <p>USA: +1 (479)-222222, +1 (479)-111111</p>
+  <p>*Calls may be recorded for training and quality purposes and for compliance with applicable regulatory requirements.</p>
+  <p>Email: info@finderspa.com</p>
+  <p>Phone: +1 (123) 456-7890</p>
+
+
+  <div class="popup" id = "success-popup">
     <div class="popup-content">
-      <span class="close-button" onclick="closePopup()">&times;</span>
+      <button class="close-button" id="close-popup" onclick="closePopup()">&times;</button>
       <h1>Contact form</h1>
       <h2>Submit the form. We'll be in touch soon!</h2>
 
@@ -150,11 +134,15 @@
   </div>
 
   <script>
-    function closePopup() {
-      document.querySelector('.popup').style.display = 'none';
-      document.body.classList.remove('blur'); // Remove blur effect when closing popup
-      window.location.href = 'contact_subpage.html'; // Redirect to the subpage
-    }
+     document.getElementById("close-popup").addEventListener("click", function () {
+            document.getElementById("success-popup").style.display = "flex";
+            document.body.classList.add("blur"); // Add blur effect when opening popup
+        });
+
+        document.getElementById("close-popup").addEventListener("click", function () {
+            document.getElementById("success-popup").style.display = "none";
+            document.body.classList.remove("blur"); // Remove blur effect when closing popup
+        });
   </script>
 </body>
 
